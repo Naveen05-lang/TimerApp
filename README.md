@@ -4,78 +4,120 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
 > **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
 
-## Step 1: Start Metro
+## 🚀 Features :
+ 1. Create Timers with name, duration, and category.
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+ 2. Group Timers by category with collapsible sections.
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+ 3. ▶️ Start, ⏸ Pause, 🔁 Reset individual or all timers in a category.
 
-```sh
-# Using npm
-npm start
+ 4. Progress Bar visualizes the remaining time.
 
-# OR using Yarn
-yarn start
-```
+ 5. Halfway Alert and Completion Modal for each timer.
 
-## Step 2: Build and run your app
+ 6. History Screen to view completed timers.
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+ 7. Dark Mode toggle with persistent theming.
 
-### Android
+ 8. Persistent Storage using AsyncStorage.
 
-```sh
-# Using npm
-npm run android
 
-# OR using Yarn
-yarn android
-```
+## 🛠 Tech Stack 
 
-### iOS
+1. React Native
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+2. React Navigation
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+3. React Context API (for global state)
 
-```sh
-bundle install
-```
+4. AsyncStorage
 
-Then, and every time you update your native dependencies, run:
+5. React Native Picker
 
-```sh
-bundle exec pod install
-```
+## ScreenShots :
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+## Timer Creation Light Theme:
+![TimerApp lightTheme](https://github.com/user-attachments/assets/1a44761b-b55b-4d4b-91c4-35a9c3e80dff)
 
-```sh
-# Using npm
-npm run ios
+## Timer Creation Dark Theme:
+![TimerApp DarkTheme](https://github.com/user-attachments/assets/a60af10f-b12a-43b1-9098-9a6da453df7f)
 
-# OR using Yarn
-yarn ios
-```
+## TimerCard:
+![TimersList](https://github.com/user-attachments/assets/c7250d00-3ffe-4809-9d6a-6b34c34728c3)
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+## Progress Bar:
+![TimerApp Progress bar](https://github.com/user-attachments/assets/29671554-4824-4c99-95bc-1cdf8a3a3988)
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+## Alerts when halfway :
+![TimerApp half way alert](https://github.com/user-attachments/assets/bbba490e-0ce2-459a-ae91-05d5d094ef95)
 
-## Step 3: Modify your app
+## Bulk actions: start, pause, reset all timers in a category:
+![Timer App Bulk Actions](https://github.com/user-attachments/assets/0fd26519-9614-4823-9635-4978e0cefd66)
 
-Now that you have successfully run the app, let's make changes!
+## Filter By Catagories :
+![TimerApp Filter By Catagory](https://github.com/user-attachments/assets/a561c93a-2cce-4eab-83a8-a30df3030c28)
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+## Alerts on Completion :
+![TimerApp Completion Alert](https://github.com/user-attachments/assets/e93919af-9afb-48d9-84a7-009312a199ce)
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+## HistoryScreen:
+![Timer History](https://github.com/user-attachments/assets/f863486c-e963-49a5-bdaf-6648ff5a2643)
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
 
-## Congratulations! :tada:
 
-You've successfully run and modified your React Native App. :partying_face:
+
+
+
+## Folder Structure
+
+.
+├── src/
+│   ├── components/            
+│   │   ├── CategorySection.jsx
+│   │   ├── ProgressBar.jsx
+│   │   ├── ThemeSwitcher.jsx
+│   │   ├── TimerCard.jsx
+│   │
+│   ├── context/                 
+│   │   ├── ThemeContext.jsx      
+│   │   ├── TimerContext.jsx      
+│   │
+│   ├── screens/            
+│   │   └── HistoryScreen.jsx                        
+│   │   ├── HomeScreen.jsx      
+│   │   └── TimerListScreen.jsx
+├── App.js                    
+├── package.json
+└── README.md
+
+
+## 📦 Installation & Setup
+
+1.Clone the repository:
+
+git clone https://github.com/Naveen05-lang/TimerApp.git
+
+2.Install dependencies:
+
+npm install
+
+3.Install AsyncStorage & Picker:
+
+npx expo install @react-native-async-storage/async-storage
+npm install @react-native-picker/picker
+
+4.Navigation:
+
+npm install @react-navigation/native
+npx expo install react-native-screens react-native-safe-area-context react-native-gesture-handler react-native-reanimated react-native-vector-icons
+npm install @react-navigation/native-stack
+npm install @react-navigation/bottom-tabs
+
+5.Run the app:
+
+npx react-native run-android
+
+
 
 ### Now what?
 
